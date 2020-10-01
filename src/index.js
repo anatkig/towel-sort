@@ -3,6 +3,6 @@
 
 module.exports = function towelSort (matrix) {
     
-    if(!matrix) return [];
+    if(!matrix||matrix.length===0) return [];
   return matrix.reduce((sum,a)=>sum.concat(a.sort((c,b)=>{if(matrix.indexOf(a)%2===0)return c-b; else return b-c})));
 }
